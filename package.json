@@ -1,22 +1,24 @@
 {
-  "name": "frontend-project-lvl1",
-  "version": "1.0.0",
-  "description": "hexlet first project",
-  "main": "index.js",
-  "bin": {
-    "frontend-project-lvl1": "brain-games.js"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kostenkoslava/frontend-project-lvl1.git"
-  },
-  "author": "Slava Kostenko",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kostenkoslava/frontend-project-lvl1/issues"
-  },
-  "homepage": "https://github.com/kostenkoslava/frontend-project-lvl1#readme"
+    "name": "frontend-project-lvl1kostenko",
+    "version": "1.0.0",
+    "description": "hexlet first project",
+    "main": "index.js",
+    "type": "module",
+    "bin": {
+        "frontend-project-lvl1": "brain-games.js",
+        "brain-games": "bin/brain-games.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kostenkoslava/frontend-project-lvl1.git"
+    },
+    "author": "Slava Kostenko",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kostenkoslava/frontend-project-lvl1/issues"
+    },
+    "homepage": "https://github.com/kostenkoslava/frontend-project-lvl1#readme"
 }
