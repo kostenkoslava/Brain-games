@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import greeting from '../cli.js';
-import { getRandom, checkAnswer } from '../index.js';
+import { getRandom, checkAnswer, endGame } from '../index.js';
 
 const brainEven = () => {
   const name = greeting();
@@ -23,6 +23,6 @@ const brainEven = () => {
       return answer;
     }
   }
-  return `Congratulations, ${name}!`;
+  return endGame(name);
 };
 export default brainEven;

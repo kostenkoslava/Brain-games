@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import greeting from '../cli.js';
-import { getRandom, checkAnswer } from '../index.js';
+import { getRandom, checkAnswer, endGame } from '../index.js';
 
 const calc = () => {
   const name = greeting();
@@ -31,6 +31,6 @@ const calc = () => {
       return concl;
     }
   }
-  return `Congratulations, ${name}!`;
+  return endGame(name);
 };
 export default calc;
