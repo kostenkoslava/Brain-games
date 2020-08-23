@@ -10,7 +10,11 @@ const brainEven = () => {
   while (counter < 3) {
     const number = getRandom('number');
     console.log(`Question: ${number}`);
-    number % 2 === 0 ? correctAnswer = 'yes' : correctAnswer = 'no';
+    if (number % 2 === 0) {
+      correctAnswer = 'yes';
+    } else {
+      correctAnswer = 'no';
+    }
     const userAnswer = readlineSync.question('Your answer: ');
     const answer = checkAnswer(userAnswer, correctAnswer);
     if (answer === true) {
