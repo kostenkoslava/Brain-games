@@ -12,7 +12,7 @@ export const checkAnswer = (userAnswer, correctAnswer) => {
     console.log('Correct!');
     return true;
   }
-  return console.log(`${String(userAnswer)} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+  return console.log(`"${String(userAnswer)}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
 };
 export const endGame = (name) => {
   console.log(`Congratulations, ${name}!`);
