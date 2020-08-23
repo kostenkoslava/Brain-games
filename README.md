@@ -6,3 +6,6 @@
 
 
 [![asciicast](https://asciinema.org/a/354917.svg)](https://asciinema.org/a/354917)
+
+<h2> Brain-Calc </h2>
+<a href="https://asciinema.org/a/4FL4cdSQ6YIzUXGhgOgB1Z659" target="_blank"><img src="https://asciinema.org/a/4FL4cdSQ6YIzUXGhgOgB1Z659.svg" /></a>
