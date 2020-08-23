@@ -14,8 +14,8 @@ const gcd = () => {
   let counter = 0;
   console.log('Find the greatest common divisor of given numbers.');
   while (counter < 3) {
-    const a = getRandom('number');
-    const b = getRandom('number');
+    const a = getRandom(100);
+    const b = getRandom(100);
     console.log(`Question: ${a} ${b}`);
     const result = generalDivider(a, b);
     const userAnswer = Number(readlineSync.question('Your answer: '));

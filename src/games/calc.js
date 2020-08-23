@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import greeting from '../cli.js';
-import { getRandom, checkAnswer, endGame } from '../index.js';
+import {
+  getRandom, checkAnswer, endGame, getRandomOperator,
+} from '../index.js';
 
 const calc = () => {
   const name = greeting();
@@ -8,9 +10,9 @@ const calc = () => {
   let counter = 0;
   let result = 0;
   while (counter < 3) {
-    const firstNumber = getRandom('number');
-    const secondNumber = getRandom('number');
-    const operator = getRandom('symbol');
+    const firstNumber = getRandom(100);
+    const secondNumber = getRandom(100);
+    const operator = getRandomOperator();
     console.log(`Question: ${firstNumber} ${operator} ${secondNumber}`);
     switch (operator) {
       case '+':

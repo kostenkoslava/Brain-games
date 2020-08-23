@@ -1,14 +1,11 @@
-export const getRandom = (string) => {
-  if (string === 'number') {
-    const number = Math.floor(Math.random() * 100);
-    return number;
-  }
-  if (string === 'symbol') {
-    const operators = ['+', '-', '*'];
-    const randomOperator = operators[Math.floor(Math.random() * operators.length)];
-    return randomOperator;
-  }
-  return string;
+export const getRandom = (edge) => {
+  const number = Math.floor(Math.random() * edge);
+  return number;
+};
+export const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+  const randomOperator = operators[Math.floor(Math.random() * operators.length)];
+  return randomOperator;
 };
 export const checkAnswer = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
