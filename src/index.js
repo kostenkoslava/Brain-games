@@ -1,19 +1,35 @@
+import readlineSync from 'readline-sync';
+import greeting from './cli.js';
+
 export const getRandom = (edge) => {
   const number = Math.floor(Math.random() * edge);
   return number;
 };
-export const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  const randomOperator = operators[Math.floor(Math.random() * operators.length)];
-  return randomOperator;
-};
-export const checkAnswer = (userAnswer, correctAnswer) => {
+const checkAnswer = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
     return true;
   }
   return console.log(`"${String(userAnswer)}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
 };
-export const endGame = (name) => {
+const endGame = (name) => {
   console.log(`Congratulations, ${name}!`);
 };
+const startGame = (descr, game) => {
+  const name = greeting();
+  let counter = 0;
+  console.log(descr);
+  while (counter < 3) {
+    const [question, correctAnswer] = game();
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    const result = checkAnswer(String(userAnswer), String(correctAnswer));
+    if (result === true) {
+      counter += 1;
+    } else {
+      return result;
+    }
+  }
+  return endGame(name);
+};
+export default startGame;
