@@ -1,22 +1,19 @@
-import startGame, { getRandom } from '../index.js';
+import playGame from '../index.js';
+import getRandom from '../tools.js';
 
-const descr = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is makeBrainPrime. Otherwise answer "no".';
 const isPrime = (x) => {
   for (let i = 2; i <= x / 2; i += 1) {
-    if (x % i === 0) {
+    if (x % i === 0 || x <= 1) {
       return false;
     }
   }
   return true;
 };
-const prime = () => {
+const makeBrainPrime = () => {
   let result = '';
-  const task = getRandom(100);
-  if (isPrime(task)) {
-    result = 'yes';
-  } else {
-    result = 'no';
-  }
+  const task = getRandom(1, 100);
+  result = (isPrime(task)) ? 'yes' : 'no';
   return [task, result];
 };
-export default () => startGame(descr, prime);
+export default () => playGame(description, makeBrainPrime);

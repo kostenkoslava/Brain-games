@@ -1,10 +1,6 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-export const getRandom = (edge) => {
-  const number = Math.floor(Math.random() * edge);
-  return number;
-};
 const checkAnswer = (userAnswer, correctAnswer) => {
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
@@ -15,10 +11,10 @@ const checkAnswer = (userAnswer, correctAnswer) => {
 const endGame = (name) => {
   console.log(`Congratulations, ${name}!`);
 };
-const startGame = (descr, game) => {
+const playGame = (description, game) => {
   const name = greeting();
   let counter = 0;
-  console.log(descr);
+  console.log(description);
   while (counter < 3) {
     const [question, correctAnswer] = game();
     console.log(`Question: ${question}`);
@@ -32,4 +28,4 @@ const startGame = (descr, game) => {
   }
   return endGame(name);
 };
-export default startGame;
+export default playGame;

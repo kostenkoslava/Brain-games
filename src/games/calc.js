@@ -1,17 +1,17 @@
-import startGame, { getRandom } from '../index.js';
+import playGame from '../index.js';
+import getRandom from '../tools.js';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const randomOperator = operators[Math.floor(Math.random() * operators.length)];
+  const randomOperator = operators[getRandom(0, 2)];
   return randomOperator;
 };
-const descr = 'What is the result of the expression?';
-const calc = () => {
+const description = 'What is the result of the expression?';
+const makeBrainCalculator = () => {
   let result = 0;
-  const firstNumber = getRandom(100);
-  const secondNumber = getRandom(100);
+  const firstNumber = getRandom(1, 100);
+  const secondNumber = getRandom(1, 100);
   const operator = getRandomOperator();
-  const question = `Question: ${firstNumber} ${operator} ${secondNumber}`;
   switch (operator) {
     case '+':
       result = firstNumber + secondNumber;
@@ -23,6 +23,7 @@ const calc = () => {
       result = firstNumber * secondNumber;
       break;
   }
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
   return [question, result];
 };
-export default () => startGame(descr, calc);
+export default () => playGame(description, makeBrainCalculator);
