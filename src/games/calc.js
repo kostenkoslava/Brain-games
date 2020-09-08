@@ -3,12 +3,12 @@ import getRandom from '../tools.js';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const randomOperator = operators[getRandom(0, 2)];
+  const randomOperator = operators[getRandom(0, operators.length - 1)];
   return randomOperator;
 };
 const description = 'What is the result of the expression?';
 const makeBrainCalculator = () => {
-  let result = 0;
+  let result;
   const firstNumber = getRandom(1, 100);
   const secondNumber = getRandom(1, 100);
   const operator = getRandomOperator();
