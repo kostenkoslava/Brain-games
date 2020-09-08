@@ -2,6 +2,12 @@
 <a href="https://codeclimate.com/github/kostenkoslava/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![Node CI](https://github.com/kostenkoslava/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/kostenkoslava/frontend-project-lvl1/actions)
 
+## Install
+```sh
+sudo npm install frontend-project-lvl1kostenko -g
+
+```
+[![asciicast](https://asciinema.org/a/WpUVHBBBgWIz40DMYO700N4vn.svg)](https://asciinema.org/a/WpUVHBBBgWIz40DMYO700N4vn)
 <h2> Brain-Even </h2>
 
 
