@@ -1,7 +1,7 @@
 import playGame from '../index.js';
 import getRandom from '../tools.js';
 
-const description = 'Answer "yes" if given number is makeBrainPrime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPrime = (x) => {
   if (x <= 1) {
     return false;

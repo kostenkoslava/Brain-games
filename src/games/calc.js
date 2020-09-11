@@ -1,4 +1,4 @@
-import playGame from '../index.js';
+import startGame from '../index.js';
 import getRandom from '../tools.js';
 
 const getRandomOperator = () => {
@@ -24,6 +24,6 @@ const makeBrainCalculator = () => {
       break;
   }
   const question = `${firstNumber} ${operator} ${secondNumber}`;
-  return [question, result];
+  return [question, String(result)];
 };
-export default () => playGame(description, makeBrainCalculator);
+export default () => startGame(description, makeBrainCalculator);
