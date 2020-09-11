@@ -1,4 +1,4 @@
-import playGame from '../index.js';
+import startGame from '../index.js';
 import getRandom from '../tools.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -18,4 +18,4 @@ const makeBrainPrime = () => {
   const result = (isPrime(task)) ? 'yes' : 'no';
   return [task, result];
 };
-export default () => playGame(description, makeBrainPrime);
+export default () => startGame(description, makeBrainPrime);
