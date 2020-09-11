@@ -1,8 +1,10 @@
 # frontend-project-lvl1
 <a href="https://codeclimate.com/github/kostenkoslava/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 [![Node CI](https://github.com/kostenkoslava/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/kostenkoslava/frontend-project-lvl1/actions)
-
-## Install
+## Description
+  Brain-games is command line game which consists 5 games where you have to find correct answers during 3 rounds.
+## How to install
+You must have last version of NodeJS before install the game.
 ```sh
 sudo npm install frontend-project-lvl1kostenko -g
 
