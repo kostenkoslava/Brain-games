@@ -5,12 +5,12 @@ const description = 'What number is missing in the progression?';
 const makeBrainProgression = () => {
   const progression = [];
   const gap = '..';
-  const progressionLength = 10;
+  const length = 10;
   const step = getRandom(1, 10);
-  const randomIndex = getRandom(0, progressionLength - 1);
-  const progressionStart = getRandom(1, 10);
-  for (let i = 0; i < progressionLength; i += 1) {
-    progression[i] = progressionStart + (step * i);
+  const randomIndex = getRandom(0, length - 1);
+  const start = getRandom(1, 10);
+  for (let i = 0; i < length; i += 1) {
+    progression[i] = start + (step * i);
   }
   const correctAnswer = progression[randomIndex];
   progression[randomIndex] = gap;
